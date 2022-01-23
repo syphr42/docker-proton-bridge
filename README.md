@@ -42,7 +42,7 @@ More information on command line options can be found here: https://protonmail.c
 
 ## Non-interactive
 
-Once setup is complete (or a proper prefs.json file is supplied at `/root/.config/protonmail/bridge/prefs.json`), the bridge can be run in non-interactive mode.
+Once setup is complete, the bridge can be run in non-interactive mode.
 
 ```
 podman run --rm -it \
