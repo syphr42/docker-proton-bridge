@@ -6,7 +6,11 @@
 - [`1.8.12`, `latest` (*Dockerfile*)](https://github.com/syphr42/docker-proton-bridge/blob/main/Dockerfile)
 
 # What is Proton Bridge?
+
 Proton Bridge translates SMTP and IMAP client requests in ProtonMail API requests so that standard mail interactions work with ProtonMail's encrypted service.
+
+Website: https://protonmail.com/bridge/
+Source: https://github.com/ProtonMail/proton-bridge
 
 # How to Use
 
