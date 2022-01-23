@@ -31,7 +31,7 @@ jobs:
               --build-arg BRIDGE_VERSION="v${version}" \
               --tag syphr/proton-bridge:"${version}" \
               $(if [ "${version}" = "${latest}" ]; then echo "--tag syphr/proton-bridge:latest"; fi) \
-              --platform linux/amd64,linux/arm/v7 \
+              --platform linux/amd64,linux/arm64 \
               --push \
               .
           done
