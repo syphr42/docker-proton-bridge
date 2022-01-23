@@ -1,4 +1,14 @@
-# ProtonMail Bridge
+![Build](https://github.com/syphr42/docker-proton-bridge/workflows/build-images/badge.svg)
+
+# Supported tags and respective `Dockerfile` links
+
+- [`2.1.0` (*Dockerfile*)](https://github.com/syphr42/docker-proton-bridge/blob/main/Dockerfile)
+- [`1.8.12`, `latest` (*Dockerfile*)](https://github.com/syphr42/docker-proton-bridge/blob/main/Dockerfile)
+
+# What is Proton Bridge?
+Proton Bridge translates SMTP and IMAP client requests in ProtonMail API requests so that standard mail interactions work with ProtonMail's encrypted service.
+
+# How to Use
 
 ## Setup
 
