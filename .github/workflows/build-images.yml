@@ -8,7 +8,7 @@ on:
       - "main"
 
 jobs:
-  build-stable:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -28,7 +28,7 @@ jobs:
           latest=1.8.12
           for version in "1.8.12" "2.1.0"; do
             docker build \
-              --build-arg BRIDGE_VERSION="${version}" \
+              --build-arg BRIDGE_VERSION="v${version}" \
               --tag syphr/proton-bridge:"${version}" \
               $(if [ "${version}" = "${latest}" ]; then echo "--tag syphr/proton-bridge:latest"; fi) \
               --platform linux/amd64,linux/arm/v7 \
