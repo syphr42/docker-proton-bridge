@@ -33,7 +33,7 @@ podman run --rm -it \
     --volume ~/.cache/protonmail/password-store:/root/.password-store \
     --volume ~/.cache/protonmail/bridge:/root/.cache/protonmail/bridge \
     -e BRIDGE_GPG_KEY="$(cat proton-bridge.asc)" \
-    syphr42/proton-bridge --cli
+    syphr/proton-bridge --cli
 ```
 
 When the interface is running, type `login` and follow the prompts. Once login is complete, type `exit` to shutdown the bridge.
@@ -52,5 +52,5 @@ podman run --rm -it \
     -env BRIDGE_GPG_KEY="$(cat proton-bridge.asc)" \
     --publish 1025:1025 \
     --publish 1143:1143 \
-    syphr42/proton-bridge --non-interactive
+    syphr/proton-bridge --non-interactive
 ```
