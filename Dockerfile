@@ -29,9 +29,6 @@ RUN apt-get update \
         pass \
  && rm -rf /var/lib/apt/lists/*
 
-# Setup
-RUN pass init "ProtonMail Bridge"
-
 # Install binary
 COPY --from=build /source/proton-bridge /usr/local/bin/
 
