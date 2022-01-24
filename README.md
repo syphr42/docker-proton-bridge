@@ -50,7 +50,9 @@ podman run --rm -it \
     syphr/proton-bridge --cli
 ```
 
-When the interface is running, type `login` and follow the prompts. Once login is complete, type `exit` to shutdown the bridge.
+When the interface is running, type `login` and follow the prompts. Once login is complete, type `info 0` to retieve login details for interacting with the bridge.
+
+Finally, type `exit` to shutdown the bridge.
 
 More information on command line options can be found here: https://protonmail.com/support/knowledge-base/bridge-cli-guide/
 
