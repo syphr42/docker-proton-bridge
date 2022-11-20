@@ -2,8 +2,8 @@
 
 # Supported tags and respective `Dockerfile` links
 
-- [`2.1.0` (*Dockerfile*)](https://github.com/syphr42/docker-proton-bridge/blob/main/Dockerfile)
-- [`1.8.12`, `latest` (*Dockerfile*)](https://github.com/syphr42/docker-proton-bridge/blob/main/Dockerfile)
+- [`2.3.0`, `latest` (*Dockerfile*)](https://github.com/syphr42/docker-proton-bridge/blob/main/Dockerfile)
+- [`1.8.12` (*Dockerfile*)](https://github.com/syphr42/docker-proton-bridge/blob/main/Dockerfile)
 
 # What is Proton Bridge?
 
