@@ -25,8 +25,8 @@ jobs:
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
       - name: Build images
         run: |
-          latest=1.8.12
-          for version in "1.8.12" "2.1.0"; do
+          latest=2.3.0
+          for version in "1.8.12" "${latest}"; do
             docker build \
               --build-arg BRIDGE_VERSION="v${version}" \
               --tag syphr/proton-bridge:"${version}" \

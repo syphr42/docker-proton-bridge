@@ -10,7 +10,7 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/*
 
 # Download source
-ARG BRIDGE_VERSION=v2.1.0
+ARG BRIDGE_VERSION
 ARG BRDIGE_SOURCE_URL=https://github.com/ProtonMail/proton-bridge.git
 WORKDIR /source
 RUN git clone --branch "${BRIDGE_VERSION}" --config advice.detachedHead=false "${BRDIGE_SOURCE_URL}" .
