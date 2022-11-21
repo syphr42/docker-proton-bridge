@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 if [ -z "${BRIDGE_GPG_KEY}" ]; then
     echo "error: BRIDGE_GPG_KEY not defined"
@@ -6,12 +7,12 @@ if [ -z "${BRIDGE_GPG_KEY}" ]; then
 fi
 
 echo "Importing GPG key..."
-gpg --batch --import <(echo "${BRIDGE_GPG_KEY}")
+gpg --batch --no-tty --import <(echo "${BRIDGE_GPG_KEY}")
 echo "Done."
 echo ""
 
 echo "Adding owner trust to imported GPG key..."
-gpg_key=$(gpg --list-keys --with-colons  | awk -F: '/fpr:/ {print $10}' | sort -u | head -n 1 | tr -d '\n')
+gpg_key=$(gpg --batch --no-tty --list-keys --with-colons | awk -F: '/fpr:/ {print $10}' | sort -u | head -n 1 | tr -d '\n')
 echo -e "5\ny\n" | gpg --command-fd 0 --expert --edit-key "${gpg_key}" trust
 echo "Done."
 echo ""
