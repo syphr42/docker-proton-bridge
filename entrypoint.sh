@@ -13,7 +13,7 @@ echo ""
 
 echo "Adding owner trust to imported GPG key..."
 gpg_key=$(gpg --batch --no-tty --list-keys --with-colons | awk -F: '/fpr:/ {print $10}' | sort -u | head -n 1 | tr -d '\n')
-echo -e "5\ny\n" | gpg --command-fd 0 --expert --edit-key "${gpg_key}" trust
+echo -e "5\ny\n" | gpg --batch --no-tty --command-fd 0 --expert --edit-key "${gpg_key}" trust
 echo "Done."
 echo ""
 
