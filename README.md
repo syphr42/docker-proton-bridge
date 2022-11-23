@@ -58,7 +58,7 @@ More information on command line options can be found here: https://protonmail.c
 
 ## Non-interactive
 
-Once setup is complete, the bridge can be run in non-interactive mode.
+Once setup is complete, the bridge can be run in non-interactive mode. Port 1025 is SMTP and port 1143 is IMAP.
 
 ```
 podman run --rm -it \
@@ -68,5 +68,5 @@ podman run --rm -it \
     -env BRIDGE_GPG_KEY="$(cat proton-bridge.asc)" \
     --publish 1025:1025 \
     --publish 1143:1143 \
-    syphr/proton-bridge --non-interactive
+    syphr/proton-bridge --noninteractive
 ```
