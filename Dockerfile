@@ -15,6 +15,9 @@ ARG BRDIGE_SOURCE_URL=https://github.com/ProtonMail/proton-bridge.git
 WORKDIR /source
 RUN git clone --branch "${BRIDGE_VERSION}" --config advice.detachedHead=false "${BRDIGE_SOURCE_URL}" .
 
+# Modify source to listen on all IP addresses
+RUN find . -type f -name "*.go" -print0 | xargs -0 sed -i -e 's/127.0.0.1/0.0.0.0/g'
+
 # Build
 RUN make build-nogui
 
